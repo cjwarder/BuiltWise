@@ -13,7 +13,9 @@ CREDENTIALS_FILE = 'builtwise-credentials.json'  # Your renamed JSON key file
 
 # --- CONNECT TO GOOGLE SHEET ---
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+creds_dict = st.secrets["google_service_account"]
+creds = ServiceAccountCredentials.from_json_keyfile_dict(dict(creds_dict), scope)
+
 client = gspread.authorize(creds)
 sheet = client.open(SHEET_NAME)
 
