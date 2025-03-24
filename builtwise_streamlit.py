@@ -29,7 +29,7 @@ def append_row(tab, row):
 
 # --- Streamlit UI ---
 st.set_page_config(page_title="BuiltWise", layout="wide")
-st.title("🏋️ BuiltWise – Cloud-Connected Workout Logger")
+st.title("🏋️ BuiltWise")
 
 tab1, tab2, tab3, tab4 = st.tabs(["📅 Dashboard", "📝 Log Sets", "📊 Progress Tracker", "📚 Exercise Library"])
 
